@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardsTemplate>
+    <MetaRules>
+        <FileNaming>
+            <Rule>Files must be named pAI_[category].xml</Rule>
+            <Examples>
+                <Example>pAI_unit_tests.xml</Example>
+                <Example>pAI_ACID.xml</Example>
+                <Example>pAI_patterns.xml</Example>
+            </Examples>
+        </FileNaming>
+        <Structure>
+            <Rule>All files must start with XML declaration and UTF-8 encoding</Rule>
+            <Rule>Root element should describe the standard category</Rule>
+            <Rule>Must contain at least one PromptGroup</Rule>
+        </Structure>
+        <Versioning>
+            <Rule>Standards files should be version controlled</Rule>
+            <Rule>Major changes require new version number</Rule>
+            <Format>vX.Y.Z where X=major, Y=minor, Z=patch</Format>
+        </Versioning>
+    </MetaRules>
+
+    <ExampleStructure>
+        <PromptGroup key="[2-LETTER-CATEGORY][NUMBER]">
+            <Description>PromptGroups organize related tasks with a unique key</Description>
+            <Examples>
+                <Example>UT1 for Unit Testing group 1</Example>
+                <Example>DB1 for Database group 1</Example>
+                <Example>AI1 for AI Processing group 1</Example>
+            </Examples>
+            
+            <Category>UPPERCASE_CATEGORY_NAME</Category>
+            
+            <Tasks>
+                <Task key="[GROUP_KEY].[TASK_NUMBER]">
+                    <Description>Tasks represent specific implementation guidelines</Description>
+                    <Examples>
+                        <Example>UT1.1 for first task in UT1</Example>
+                        <Example>DB1.2 for second task in DB1</Example>
+                    </Examples>
+                    
+                    <Name>TASK_NAME_IN_CAPS</Name>
+                    <Template>
+                        <Steps>
+                            <Step>1. Steps must be numbered</Step>
+                            <Step>2. Steps must be clear and actionable</Step>
+                            <Step>3. Steps should be ordered logically</Step>
+                        </Steps>
+                        
+                        <ValidationCriteria>
+                            <Criterion>Specific measurable requirements</Criterion>
+                            <Criterion>Clear success/failure conditions</Criterion>
+                        </ValidationCriteria>
+                        
+                        <ErrorHandling>
+                            <Strategy>How to handle failures</Strategy>
+                            <Fallback>Alternative approaches</Fallback>
+                        </ErrorHandling>
+                        
+                        <Monitoring>
+                            <Metrics>
+                                <Metric>Quantifiable measurements</Metric>
+                            </Metrics>
+                            <Alerts>
+                                <Alert>Specific trigger conditions</Alert>
+                            </Alerts>
+                        </Monitoring>
+                    </Template>
+                </Task>
+            </Tasks>
+        </PromptGroup>
+    </ExampleStructure>
+
+    <FormattingRules>
+        <Indentation>
+            <Rule>Use 4 spaces for indentation</Rule>
+            <Rule>Maintain consistent indentation throughout</Rule>
+        </Indentation>
+        <Naming>
+            <Rule>Use UPPERCASE for category and task names</Rule>
+            <Rule>Use underscore_separation for compound names</Rule>
+            <Rule>Keys should be short but descriptive</Rule>
+        </Naming>
+        <ContentGuidelines>
+            <Rule>All text should be clear and concise</Rule>
+            <Rule>Use active voice in instructions</Rule>
+            <Rule>Include specific examples where helpful</Rule>
+            <Rule>Break complex tasks into subtasks</Rule>
+        </ContentGuidelines>
+        <RequiredSections>
+            <Section>Steps - Numbered implementation steps</Section>
+            <Section>ValidationCriteria - Success/failure conditions</Section>
+            <Section>ErrorHandling - Failure management</Section>
+            <Section>Monitoring - Metrics and alerts</Section>
+        </RequiredSections>
+    </FormattingRules>
+
+    <ValidationRules>
+        <XMLValidation>
+            <Rule>Must be well-formed XML</Rule>
+            <Rule>Must validate against schema</Rule>
+            <Rule>No empty elements allowed</Rule>
+        </XMLValidation>
+        <ContentValidation>
+            <Rule>All referenced keys must be unique</Rule>
+            <Rule>All steps must be actionable</Rule>
+            <Rule>All criteria must be measurable</Rule>
+            <Rule>All metrics must be quantifiable</Rule>
+        </ContentValidation>
+        <CrossReferencing>
+            <Rule>Referenced files must exist</Rule>
+            <Rule>Referenced tasks must be defined</Rule>
+            <Rule>Circular dependencies not allowed</Rule>
+        </CrossReferencing>
+    </ValidationRules>
+</StandardsTemplate> 

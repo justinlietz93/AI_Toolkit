@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DevelopmentRules>
+
+    <!-- ========================== -->
+    <!--  MANDATORY RULES INDEX     -->
+    <!-- ========================== -->
+    <MiniIndex>
+        <!-- BLOCKING -->
+        <Reference index="1" title="TEST-DRIVEN DEVELOPMENT" priority="BLOCKING"/>
+        <Reference index="4" title="TESTING STANDARDS" priority="BLOCKING"/>
+
+        <!-- CRITICAL -->
+        <Reference index="7" title="AUTOMATION &amp; HUMAN INTERACTION" priority="CRITICAL"/>
+
+        <!-- NORMAL -->
+        <Reference index="2" title="CODE ORGANIZATION" priority="NORMAL"/>
+        <Reference index="3" title="DEPENDENCY MANAGEMENT" priority="NORMAL"/>
+        <Reference index="5" title="SYSTEM ARCHITECTURE" priority="NORMAL"/>
+        <Reference index="6" title="PERFORMANCE &amp; SCALING" priority="NORMAL"/>
+        <Reference index="8" title="KNOWLEDGE MANAGEMENT" priority="NORMAL"/>
+        <Reference index="9" title="GOAL TRACKING &amp; SUCCESS METRICS" priority="NORMAL"/>
+        <Reference index="10" title="AUTONOMOUS OPERATIONS" priority="NORMAL"/>
+        <Reference index="11" title="READING FILES" priority="NORMAL"/>
+        <Reference index="12" title="EDITING FILES" priority="NORMAL"/>
+        <Reference index="13" title="CODEBASE SEARCHES" priority="NORMAL"/>
+        <Reference index="14" title="EXECUTING COMMANDS" priority="NORMAL"/>
+        <Reference index="15" title="DIRECTORY TOOL" priority="NORMAL"/>
+        <Reference index="16" title="PARALLEL EDIT TOOL" priority="NORMAL"/>
+        <Reference index="17" title="HANDOFF SUMMARY TEMPLATE" priority="NORMAL"/>
+    </MiniIndex>
+
+    <!-- ========================= -->
+    <!-- BLOCKING PRIORITY RULES  -->
+    <!-- ========================= -->
+    <Priority name="BLOCKING">
+        <Rule index="1" title="TEST-DRIVEN DEVELOPMENT">
+            <Points>
+                <Point>Tests MUST be created and passing before implementation</Point>
+                <Point>Create test file first</Point>
+                <Point>Implement until tests pass</Point>
+                <Point>No exceptions to this rule</Point>
+                <Point>Tests must be comprehensive and cover edge cases</Point>
+            </Points>
+        </Rule>
+    </Priority>
+
+    <Priority name="BLOCKING">
+        <Rule index="4" title="TESTING STANDARDS">
+            <Points>
+                <Point>ALWAYS ACKNOWLEDGE THE FAILURE MESSAGES AND TRACEBACKS</Point>
+                <Point>Every module requires corresponding test</Point>
+                <Point>Tests must be comprehensive</Point>
+                <Point>Follow test naming conventions</Point>
+                <Point>Include performance and resource tests</Point>
+                <Point>Test all toggleable components independently</Point>
+                <Point>Test module unplugging and rerouting scenarios</Point>
+            </Points>
+        </Rule>
+    </Priority>
+
+    <!-- ========================= -->
+    <!-- CRITICAL PRIORITY RULES  -->
+    <!-- ========================= -->
+    <Priority name="CRITICAL">
+        <Rule index="7" title="AUTOMATION &amp; HUMAN INTERACTION">
+            <Points>
+                <Point>System must be self-maintaining and self-extending</Point>
+                <Point>NO human code contributions unless absolutely necessary</Point>
+                <Point>All code changes must be AI-driven and automatically tested</Point>
+                <Point>Human role is limited to high-level goals and critical decisions</Point>
+                <Point>System must self-document and maintain its own standards</Point>
+                <Point>All routine maintenance must be automated</Point>
+                <Point>System must validate its own changes</Point>
+                <Point>Changes must be automatically rolled back if validation fails</Point>
+                <Point>Human overrides require explicit justification and logging</Point>
+                <Point><Toggle>OFF</Toggle>There must always be an AI agent serving the security sentinel role</Point>
+                <Point>Security systems must be self improving and fully automated</Point>
+            </Points>
+        </Rule>
+    </Priority>
+
+    <!-- ========================= -->
+    <!-- NORMAL PRIORITY RULES    -->
+    <!-- ========================= -->
+    <Priority name="NORMAL">
+
+        <Rule index="2" title="CODE ORGANIZATION">
+            <Points>
+                <Point>NO docstrings in file headers, use hashtags only</Point>
+                <Point>Follow standards/ folder conventions</Point>
+                <Point>Review relevant standards before changes</Point>
+                <Point>Maintain modular &quot;mecha-suit&quot; architecture</Point>
+                <Point>Keep core components pluggable and toggleable</Point>
+                <Point>Each module must support safe &quot;hot-unplugging&quot;</Point>
+                <Point>Pipeline rerouting must be possible but NEVER at cost of simplicity</Point>
+                <Point>If unplugging/rerouting adds complexity, keep it simple instead</Point>
+                <Point>Module dependencies must be explicit and documented</Point>
+            </Points>
+        </Rule>
+
+        <Rule index="3" title="DEPENDENCY MANAGEMENT">
+            <Points>
+                <Point>Check dependencies.json before adding packages</Point>
+                <Point>Verify against tech_knowledge.xml for new packages</Point>
+                <Point>Create tests for all dependencies</Point>
+                <Point>Monitor token costs and usage</Point>
+                <Point>Track API dependencies separately</Point>
+            </Points>
+        </Rule>
+
+        <Rule index="5" title="SYSTEM ARCHITECTURE">
+            <Points>
+                <Point>Maintain agent isolation and specialization</Point>
+                <Point>Keep memory system minimal but extensible</Point>
+                <Point>Ensure proper error handling and logging</Point>
+                <Point>Follow autonomous operation principles</Point>
+                <Point>Implement proper feedback loops</Point>
+                <Point>Support graceful degradation of features</Point>
+            </Points>
+        </Rule>
+
+        <Rule index="6" title="PERFORMANCE &amp; SCALING">
+            <Points>
+                <Point>Monitor and optimize token usage</Point>
+                <Point>Keep core system lightweight</Point>
+                <Point>Maintain sub-100ms response times</Point>
+                <Point>Design for future distributed processing</Point>
+                <Point>Consider resource constraints</Point>
+            </Points>
+        </Rule>
+
+        <Rule index="8" title="KNOWLEDGE MANAGEMENT">
+            <Points>
+                <Point>Maintain up-to-date tech knowledge base by running the data\tech_knowledge_updater.py script, then looking in the data\tech_trends.json</Point>
+                <Point>Auto-update package and dependency information</Point>
+                <Point>Track breaking changes and deprecations</Point>
+                <Point>Knowledge must be versioned and rollback-capable</Point>
+                <Point>System must learn from past decisions</Point>
+                <Point>Knowledge updates must not disrupt running operations</Point>
+            </Points>
+        </Rule>
+
+        <Rule index="9" title="GOAL TRACKING &amp; SUCCESS METRICS">
+            <Points>
+                <Point>Every change must link to specific goals</Point>
+                <Point>Success metrics must be quantifiable</Point>
+                <Point>Track goal completion and task alignment</Point>
+                <Point>Goals must adapt based on feedback</Point>
+                <Point>System must maintain goal hierarchy</Point>
+                <Point>Goals must have clear completion criteria</Point>
+            </Points>
+        </Rule>
+
+        <Rule index="10" title="AUTONOMOUS OPERATIONS">
+            <Points>
+                <Point>System must self-diagnose issues</Point>
+                <Point>Auto-recovery from failures required</Point>
+                <Point>Continuous self-optimization</Point>
+                <Point>Proactive maintenance and updates</Point>
+                <Point>Resource allocation must be self-managed</Point>
+                <Point>System must explain its decisions</Point>
+                <Point>Learning from operational patterns</Point>
+                <Point>Automatic backup and restore capabilities</Point>
+            </Points>
+        </Rule>
+
+        <Rule index="11" title="READING FILES">
+            <Points>
+                <Point>Read in chunks of maximum 250 lines</Point>
+                <Point>Always verify if you have complete context</Point>
+                <Point>Make multiple calls if needed to gather full context</Point>
+                <Point>Only read entire files when necessary</Point>
+                <Point>Explain why youre reading each section</Point>
+            </Points>
+        </Rule>
+
+        <Rule index="12" title="EDITING FILES">
+            <Points>
+                <Point>Minimal Changes: Only include the code that needs to change</Point>
+                <Point>Clear Context: Always include enough surrounding code to locate the change</Point>
+                <Point>Explicit Markers: Use // ... existing code ... to indicate unchanged sections</Point>
+                <Point>Documentation: Include docstrings and comments for new code</Point>
+                <Point>Type Hints: Include type hints for new parameters and return types</Point>
+            </Points>
+        </Rule>
+
+        <Rule index="13" title="CODEBASE SEARCHES">
+            <Points>
+                <Point>Use exact user queries when possible</Point>
+                <Point>Keep queries focused and specific</Point>
+                <Point>Use target directories when you know where to look</Point>
+                <Point>Explain the purpose of each search</Point>
+                <Point>Every file will have very detailed headers and comments</Point>
+            </Points>
+        </Rule>
+
+        <Rule index="14" title="EXECUTING COMMANDS">
+            <Points>
+                <Point>Always explain what the command does</Point>
+                <Point>Use | cat for commands that would use a pager</Point>
+                <Point>Set background flag for long-running commands</Point>
+                <Point>Be explicit about user approval requirements</Point>
+                <Point>Consider current working directory</Point>
+            </Points>
+        </Rule>
+
+        <Rule index="15" title="DIRECTORY TOOL">
+            <Points>
+                <Point>Start with list_dir for initial exploration</Point>
+                <Point>Use file_search for finding specific files</Point>
+                <Point>Use grep_search for finding specific code patterns</Point>
+                <Point>Explain the purpose of each search operation</Point>
+            </Points>
+        </Rule>
+
+        <Rule index="16" title="PARALLEL EDIT TOOL">
+            <Points>
+                <Point>Keep edit plan clear and specific</Point>
+                <Point>Include sufficient context in regions</Point>
+                <Point>Limit to 50 files maximum</Point>
+                <Point>Ensure edits are truly parallel in nature</Point>
+                <Point>Test on a single file first</Point>
+            </Points>
+        </Rule>
+
+        <!-- ========================= -->
+        <!-- HANDOFF SUMMARY TEMPLATE -->
+        <!-- ========================= -->
+        <Rule index="17" title="HANDOFF SUMMARY TEMPLATE">
+            <Points>
+                <Point><![CDATA[
+# 17. HANDOFF SUMMARY TEMPLATE
+# --------------------------
+# When providing a handoff summary, ALWAYS use this format:
+
+"""
+HANDOFF SUMMARY
+
+1. CURRENT STATE
+---------------
+- Project/Component: [Brief description of what's being worked on]
+- Status: [Current state of development/testing]
+- Recent Changes: [List of recent modifications]
+- Active Issues: [Any ongoing problems or bugs]
+
+2. CRITICAL CONTEXT
+------------------
+- Key Files: [List of relevant files and their purposes]
+- Dependencies: [Important dependencies or relationships]
+- Environment: [Any specific environment requirements]
+- Test Status: [Current state of tests, passing/failing]
+
+3. NEXT STEPS
+------------
+- Immediate Tasks: [What needs to be done next]
+- Known Issues: [Issues that need addressing]
+- Potential Improvements: [Areas identified for enhancement]
+- Blocked Items: [Tasks blocked by dependencies/issues]
+
+4. TECHNICAL DETAILS
+-------------------
+- Architecture Changes: [Any modifications to system architecture]
+- API Changes: [Changes to interfaces or endpoints]
+- Database Changes: [Modifications to data structures]
+- Performance Impacts: [Any performance considerations]
+
+5. DOCUMENTATION
+---------------
+- Updated Docs: [Recently updated documentation]
+- Needed Docs: [Documentation that needs to be created/updated]
+- Test Coverage: [State of test documentation]
+- Standards Compliance: [Adherence to project standards]
+
+6. NOTES FOR NEXT INSTANCE
+-------------------------
+- Warnings: [Important cautions or considerations]
+- Suggestions: [Recommendations for next steps]
+- Resources: [Helpful resources or references]
+- Context Windows: [Important context to maintain]
+"""
+
+# Use this template for ALL handoffs
+# Ensure EACH section is filled with relevant information
+# If a section is not applicable, mark it as "N/A" but DO NOT omit it
+# ALWAYS verify the accuracy of information before handoff
+                ]]></Point>
+            </Points>
+        </Rule>
+    </Priority>
+
+</DevelopmentRules>

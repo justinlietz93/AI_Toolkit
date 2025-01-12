@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TaskExecutionPrompts>
+    <PromptGroup key="DB1">
+        <Category>DATABASE_INITIALIZATION</Category>
+        <Tasks>
+            <Task key="DB1.1">
+                <Name>SCHEMA_SETUP</Name>
+                <Template>
+                    <Steps>
+                        <Step>1. Verify database connection parameters</Step>
+                        <Step>2. Initialize connection pool</Step>
+                        <Step>3. Create schema if not exists</Step>
+                        <Step>4. Verify table structures</Step>
+                        <Step>5. Create specialized indexes</Step>
+                    </Steps>
+                    <ValidationCriteria>
+                        <Criterion>Connection pool active</Criterion>
+                        <Criterion>Schema version verified</Criterion>
+                        <Criterion>Indexes optimized</Criterion>
+                    </ValidationCriteria>
+                    <ErrorHandling>
+                        <Strategy>Transactional rollback</Strategy>
+                        <Retry>Exponential backoff</Retry>
+                        <Fallback>Use backup configuration</Fallback>
+                    </ErrorHandling>
+                    <Monitoring>
+                        <Metrics>
+                            <Metric>Connection latency</Metric>
+                            <Metric>Pool utilization</Metric>
+                            <Metric>Schema validation time</Metric>
+                        </Metrics>
+                        <Alerts>
+                            <Alert>Connection failures</Alert>
+                            <Alert>Schema version mismatch</Alert>
+                            <Alert>Index degradation</Alert>
+                        </Alerts>
+                    </Monitoring>
+                </Template>
+            </Task>
+
+            <Task key="DB1.2">
+                <Name>INDEX_OPTIMIZATION</Name>
+                <Template>
+                    <Steps>
+                        <Step>1. Analyze query patterns</Step>
+                        <Step>2. Identify index candidates</Step>
+                        <Step>3. Create optimized indexes</Step>
+                        <Step>4. Validate index performance</Step>
+                    </Steps>
+                    <Metrics>
+                        <Metric>Query execution time</Metric>
+                        <Metric>Index size</Metric>
+                        <Metric>Index usage statistics</Metric>
+                    </Metrics>
+                    <ACID>
+                        <Atomicity>
+                            <Strategy>Transaction wrapping</Strategy>
+                            <Rollback>Automatic on failure</Rollback>
+                        </Atomicity>
+                        <Consistency>
+                            <Validation>Foreign key constraints</Validation>
+                            <Check>Data integrity rules</Check>
+                        </Consistency>
+                        <Isolation>
+                            <Level>SERIALIZABLE</Level>
+                            <Handling>Deadlock detection</Handling>
+                        </Isolation>
+                        <Durability>
+                            <Strategy>Write-ahead logging</Strategy>
+                            <Sync>Full page writes</Sync>
+                        </Durability>
+                    </ACID>
+                    <Performance>
+                        <Monitoring>
+                            <Metric>Query plan efficiency</Metric>
+                            <Metric>Buffer hit ratio</Metric>
+                            <Metric>Index scan ratio</Metric>
+                        </Monitoring>
+                        <Optimization>
+                            <Strategy>Adaptive indexing</Strategy>
+                            <Maintenance>Regular reindexing</Maintenance>
+                        </Optimization>
+                    </Performance>
+                </Template>
+            </Task>
+
+            <Task key="DB1.3">
+                <Name>STATE_PERSISTENCE</Name>
+                <Template>
+                    <Steps>
+                        <Step>1. Initialize state tables</Step>
+                        <Step>2. Set up change tracking</Step>
+                        <Step>3. Configure backup strategy</Step>
+                        <Step>4. Implement recovery procedures</Step>
+                    </Steps>
+                    <StateManagement>
+                        <Strategy>
+                            <Type>Incremental state tracking</Type>
+                            <Storage>LSM tree-based</Storage>
+                            <Compression>Delta encoding</Compression>
+                        </Strategy>
+                        <Recovery>
+                            <Method>Point-in-time recovery</Method>
+                            <Granularity>Transaction level</Granularity>
+                            <Validation>Checksum verification</Validation>
+                        </Recovery>
+                    </StateManagement>
+                    <Monitoring>
+                        <Metrics>
+                            <Metric>State change frequency</Metric>
+                            <Metric>Storage efficiency</Metric>
+                            <Metric>Recovery time objective</Metric>
+                        </Metrics>
+                        <HealthChecks>
+                            <Check>State consistency</Check>
+                            <Check>Backup integrity</Check>
+                            <Check>Recovery readiness</Check>
+                        </HealthChecks>
+                    </Monitoring>
+                </Template>
+            </Task>
+
+            <Task key="DB1.4">
+                <Name>VERIFICATION_MANAGER</Name>
+                <Template>
+                    <Steps>
+                        <Step>1. Initialize verification framework</Step>
+                        <Step>2. Set up validation rules</Step>
+                        <Step>3. Configure monitoring</Step>
+                        <Step>4. Establish checkpoints</Step>
+                    </Steps>
+                    <ValidationFramework>
+                        <DataIntegrity>
+                            <Check>Schema consistency</Check>
+                            <Check>Referential integrity</Check>
+                            <Check>Constraint validation</Check>
+                        </DataIntegrity>
+                        <TransactionManagement>
+                            <Strategy>Two-phase commit</Strategy>
+                            <Isolation>Serializable</Isolation>
+                            <Deadlock>Detection and prevention</Deadlock>
+                        </TransactionManagement>
+                        <StateValidation>
+                            <Strategy>Incremental verification</Strategy>
+                            <Checkpoints>Transaction boundaries</Checkpoints>
+                            <Recovery>Point-in-time restore</Recovery>
+                        </StateValidation>
+                    </ValidationFramework>
+                    <Monitoring>
+                        <Metrics>
+                            <Metric>Validation success rate</Metric>
+                            <Metric>Integrity check duration</Metric>
+                            <Metric>Recovery time objective</Metric>
+                        </Metrics>
+                        <Alerts>
+                            <Alert>Validation failures</Alert>
+                            <Alert>Integrity violations</Alert>
+                            <Alert>Recovery triggers</Alert>
+                        </Alerts>
+                    </Monitoring>
+                    <ErrorHandling>
+                        <Strategy>Progressive validation</Strategy>
+                        <Recovery>
+                            <Method>Checkpoint restore</Method>
+                            <Validation>State consistency</Validation>
+                        </Recovery>
+                        <Logging>
+                            <Level>Detailed</Level>
+                            <Format>Structured JSON</Format>
+                            <Retention>30 days</Retention>
+                        </Logging>
+                    </ErrorHandling>
+                </Template>
+            </Task>
+        </Tasks>
+    </PromptGroup>
+</TaskExecutionPrompts> 

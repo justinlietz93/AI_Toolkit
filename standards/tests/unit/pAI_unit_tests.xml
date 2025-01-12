@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestingStandards>
+    <PromptGroup key="UT1">
+        <Category>UNIT_TEST_DESIGN</Category>
+        <Tasks>
+            <Task key="UT1.1">
+                <Name>TEST_STRUCTURE_SETUP</Name>
+                <Template>
+                    <Steps>
+                        <Step>1. Define test class inheriting from base test framework</Step>
+                        <Step>2. Implement setUp and tearDown methods</Step>
+                        <Step>3. Create isolated test environment</Step>
+                        <Step>4. Initialize test fixtures and mocks</Step>
+                        <Step>5. Setup logging and monitoring</Step>
+                    </Steps>
+                    <ValidationCriteria>
+                        <Criterion>Test isolation verified</Criterion>
+                        <Criterion>Resource cleanup confirmed</Criterion>
+                        <Criterion>Logging properly configured</Criterion>
+                    </ValidationCriteria>
+                    <ErrorHandling>
+                        <Strategy>Graceful teardown on failure</Strategy>
+                        <Cleanup>Remove temporary resources</Cleanup>
+                        <Logging>Detailed error state capture</Logging>
+                    </ErrorHandling>
+                    <Monitoring>
+                        <Metrics>
+                            <Metric>Test setup time</Metric>
+                            <Metric>Resource usage</Metric>
+                            <Metric>Isolation verification</Metric>
+                        </Metrics>
+                    </Monitoring>
+                </Template>
+            </Task>
+
+            <Task key="UT1.2">
+                <Name>TEST_CASE_IMPLEMENTATION</Name>
+                <Template>
+                    <Steps>
+                        <Step>1. Define clear test method names</Step>
+                        <Step>2. Structure as Arrange-Act-Assert</Step>
+                        <Step>3. Implement test assertions</Step>
+                        <Step>4. Add error cases</Step>
+                        <Step>5. Document expected behavior</Step>
+                    </Steps>
+                    <TestStructure>
+                        <Naming>
+                            <Pattern>test_[feature]_[scenario]_[expected]</Pattern>
+                            <Examples>
+                                <Example>test_login_valid_credentials_succeeds</Example>
+                                <Example>test_parse_invalid_input_raises_error</Example>
+                            </Examples>
+                        </Naming>
+                        <Organization>
+                            <Section>Setup/Arrange</Section>
+                            <Section>Action/Execute</Section>
+                            <Section>Verify/Assert</Section>
+                            <Section>Cleanup</Section>
+                        </Organization>
+                    </TestStructure>
+                    <AssertionGuidelines>
+                        <Principle>Single responsibility per test</Principle>
+                        <Principle>Clear failure messages</Principle>
+                        <Principle>Comprehensive edge cases</Principle>
+                        <Types>
+                            <Type>Equality assertions</Type>
+                            <Type>Exception assertions</Type>
+                            <Type>State validation assertions</Type>
+                            <Type>Type checking assertions</Type>
+                        </Types>
+                    </AssertionGuidelines>
+                </Template>
+            </Task>
+
+            <Task key="UT1.3">
+                <Name>TEST_DATA_MANAGEMENT</Name>
+                <Template>
+                    <Steps>
+                        <Step>1. Create test data fixtures</Step>
+                        <Step>2. Implement data isolation</Step>
+                        <Step>3. Setup state management</Step>
+                        <Step>4. Define cleanup procedures</Step>
+                    </Steps>
+                    <DataHandling>
+                        <Fixtures>
+                            <Type>Static test data</Type>
+                            <Type>Generated test data</Type>
+                            <Type>Parameterized inputs</Type>
+                        </Fixtures>
+                        <StateManagement>
+                            <Strategy>Isolated state per test</Strategy>
+                            <Strategy>State verification</Strategy>
+                            <Strategy>Cleanup validation</Strategy>
+                        </StateManagement>
+                        <DataValidation>
+                            <Check>Data integrity</Check>
+                            <Check>Cross-reference validation</Check>
+                            <Check>Boundary conditions</Check>
+                        </DataValidation>
+                    </DataHandling>
+                    <ErrorHandling>
+                        <Strategy>Data cleanup on failure</Strategy>
+                        <Strategy>State restoration</Strategy>
+                        <Strategy>Resource release</Strategy>
+                    </ErrorHandling>
+                </Template>
+            </Task>
+
+            <Task key="UT1.4">
+                <Name>MOCK_AND_STUB_USAGE</Name>
+                <Template>
+                    <Steps>
+                        <Step>1. Identify external dependencies</Step>
+                        <Step>2. Create mock objects</Step>
+                        <Step>3. Define stub behaviors</Step>
+                        <Step>4. Verify interactions</Step>
+                    </Steps>
+                    <MockingGuidelines>
+                        <Principle>Mock external dependencies only</Principle>
+                        <Principle>Stub pure functions</Principle>
+                        <Principle>Verify critical interactions</Principle>
+                        <Types>
+                            <Type>Function mocks</Type>
+                            <Type>Class mocks</Type>
+                            <Type>Context manager mocks</Type>
+                        </Types>
+                    </MockingGuidelines>
+                    <Verification>
+                        <Check>Call counts</Check>
+                        <Check>Parameter validation</Check>
+                        <Check>Return value verification</Check>
+                        <Check>Exception simulation</Check>
+                    </Verification>
+                </Template>
+            </Task>
+
+            <Task key="UT1.5">
+                <Name>PERFORMANCE_MONITORING</Name>
+                <Template>
+                    <Steps>
+                        <Step>1. Setup performance metrics</Step>
+                        <Step>2. Define benchmarks</Step>
+                        <Step>3. Implement timing checks</Step>
+                        <Step>4. Monitor resource usage</Step>
+                    </Steps>
+                    <Metrics>
+                        <Timing>
+                            <Metric>Test execution time</Metric>
+                            <Metric>Setup/teardown time</Metric>
+                            <Metric>Operation latency</Metric>
+                        </Timing>
+                        <Resources>
+                            <Metric>Memory usage</Metric>
+                            <Metric>CPU utilization</Metric>
+                            <Metric>File handle count</Metric>
+                        </Resources>
+                        <Thresholds>
+                            <Limit>Maximum execution time</Limit>
+                            <Limit>Memory growth limit</Limit>
+                            <Limit>Resource leak detection</Limit>
+                        </Thresholds>
+                    </Metrics>
+                    <Reporting>
+                        <Format>JSON metrics output</Format>
+                        <Format>Time series data</Format>
+                        <Format>Resource usage graphs</Format>
+                    </Reporting>
+                </Template>
+            </Task>
+        </Tasks>
+    </PromptGroup>
+</TestingStandards> 

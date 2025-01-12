@@ -1,0 +1,128 @@
+<DesignPattern key="1">
+   <Name>Singleton</Name>
+   <Description>Limit the number of instances of a class to one</Description>
+</DesignPattern>
+<DesignPattern key="2">
+   <Name>Factory</Name>
+   <Description>Provide an interface for creating objects in a superclass, but allow subclasses to alter the type of objects that will be created</Description>
+</DesignPattern>
+<DesignPattern key="3">
+   <Name>Observer</Name>
+   <Description>Define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically</Description>
+</DesignPattern>
+<DesignPattern key="4">
+   <Name>Decorator</Name>
+   <Description>Attach additional responsibilities to an object dynamically</Description>
+</DesignPattern>
+<DesignPattern key="5">
+   <Name>Adapter</Name>
+   <Description>Convert the interface of a class into another interface clients expect</Description>
+</DesignPattern>
+<DesignPattern key="6">
+   <Name>Facade</Name>
+   <Description>Provide a unified interface to a set of interfaces in a subsystem</Description>
+</DesignPattern>
+<DesignPattern key="7">
+   <Name>Proxy</Name>
+   <Description>Provide a surrogate or placeholder for another object to control access to it</Description>
+</DesignPattern>
+<DesignPattern key="8">
+   <Name>Strategy</Name>
+   <Description>Define a family of algorithms, encapsulate each one, and make them interchangeable</Description>
+</DesignPattern>
+<DesignPattern key="9">
+   <Name>Command</Name>
+   <Description>Encapsulate a request as an object, letting you parameterize clients with different requests</Description>
+</DesignPattern>
+<DesignPattern key="10">
+   <Name>State</Name>
+   <Description>Allow an object to alter its behavior when its internal state changes</Description>
+</DesignPattern>
+<DesignPattern key="11">
+   <Name>Template Method</Name>
+   <Description>Define the skeleton of an algorithm in a method, deferring some steps to subclasses</Description>
+</DesignPattern>
+<DesignPattern key="12">
+   <Name>Iterator</Name>
+   <Description>Provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation</Description>
+</DesignPattern>
+<DesignPattern key="13">
+   <Name>Composite</Name>
+   <Description>Compose objects into tree structures to represent part-whole hierarchies</Description>
+</DesignPattern>
+<DesignPattern key="14">
+   <Name>Bridge</Name>
+   <Description>Decouple an abstraction from its implementation so that the two can vary independently</Description>
+</DesignPattern>
+<DesignPattern key="15">
+   <Name>Chain of Responsibility</Name>
+   <Description>Pass requests along a chain of handlers until one processes the request</Description>
+</DesignPattern>
+<DesignPattern key="16">
+   <Name>Mediator</Name>
+   <Description>Define an object that encapsulates how a set of objects interact</Description>
+</DesignPattern>
+<DesignPattern key="17">
+   <Name>Memento</Name>
+   <Description>Capture and externalize an object's internal state so it can be restored later</Description>
+</DesignPattern>
+<DesignPattern key="18">
+   <Name>Visitor</Name>
+   <Description>Represent an operation to be performed on elements of an object structure</Description>
+</DesignPattern>
+<DesignPattern key="19">
+   <Name>Prototype</Name>
+   <Description>Create new objects by cloning an existing object, known as the prototype</Description>
+</DesignPattern>
+<DesignPattern key="20">
+   <Name>Builder</Name>
+   <Description>Separate the construction of a complex object from its representation</Description>
+</DesignPattern>
+<DesignPattern key="21">
+   <Name>Flyweight</Name>
+   <Description>Use sharing to support large numbers of fine-grained objects efficiently</Description>
+</DesignPattern>
+<DesignPattern key="22">
+   <Name>Interpreter</Name>
+   <Description>Define a grammatical representation for a language and an interpreter to interpret the grammar</Description>
+</DesignPattern>
+<DesignPattern key="23">
+   <Name>Neural Network</Name>
+   <Description>Organize layers of artificial neurons to learn patterns and make predictions through backpropagation and gradient descent</Description>
+</DesignPattern>
+<DesignPattern key="24">
+   <Name>Transfer Learning</Name>
+   <Description>Reuse a pre-trained model as a starting point for a new but related problem domain</Description>
+</DesignPattern>
+<DesignPattern key="25">
+   <Name>Ensemble</Name>
+   <Description>Combine multiple models to produce better predictive performance than could be obtained from any single model</Description>
+</DesignPattern>
+<DesignPattern key="26">
+   <Name>Pipeline</Name>
+   <Description>Chain multiple steps of a machine learning workflow into a single unit that can be treated as an estimator</Description>
+</DesignPattern>
+<DesignPattern key="27">
+   <Name>Feature Engineering</Name>
+   <Description>Transform raw data into features that better represent the underlying problem to predictive models</Description>
+</DesignPattern>
+<DesignPattern key="28">
+   <Name>Model Registry</Name>
+   <Description>Centralize storage and versioning of machine learning models with metadata and lineage tracking</Description>
+</DesignPattern>
+<DesignPattern key="29">
+   <Name>Online Learning</Name>
+   <Description>Update model parameters incrementally as new data becomes available rather than retraining from scratch</Description>
+</DesignPattern>
+<DesignPattern key="30">
+   <Name>Model Serving</Name>
+   <Description>Deploy trained models as services that can make predictions in response to requests</Description>
+</DesignPattern>
+<DesignPattern key="31">
+   <Name>Feature Store</Name>
+   <Description>Centralize feature computation and serving to ensure consistency between training and inference</Description>
+</DesignPattern>
+<DesignPattern key="32">
+   <Name>Experiment Tracking</Name>
+   <Description>Log and organize machine learning experiments, including parameters, metrics, and artifacts</Description>
+</DesignPattern>
